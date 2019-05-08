@@ -1,0 +1,36 @@
+[server]
+address = "0.0.0.0"
+port = 8080
+
+[server.debug]
+request[]=error
+request[]=uncaught
+
+[database]
+database = "database"
+username = "api"
+password = "api"
+hostname = "localhost"
+port = 3306
+dialect = "mysql"
+
+[authentication.bnpbaribas.oauth]
+scopes[] = "aisp"
+clientId = ""
+secret = ""
+[authentication.bnpbaribas.oauth.cookie]
+password = "oD8GARsTemkksF546U7g3lUOB5QGKyHt"
+
+
+[authentication.keytradebank.oauth]
+scopes[] = "AIS:VALID_CONSENT_ID"
+clientId = "VALID_CLIENT_ID"
+secret = ""
+[authentication.keytradebank.oauth.cookie]
+password = "oD8GARsTemkksF546U7g3lUOB5QGKyHt"
+
+[authentication.cookie]
+name = "session"
+password = "jmS1M31PuauJCQSCJkKEuCVs3b5AJp1X"
+
+

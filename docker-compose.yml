@@ -1,0 +1,31 @@
+version: '2.0'
+services:
+  database:
+    image: mariadb:10.2
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: database
+      MYSQL_USER: api
+      MYSQL_PASSWORD: api
+    logging:
+      driver: syslog
+      options:
+        tag: "{{.DaemonName}}(image={{.ImageName}};name={{.Name}};id={{.ID}})"
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/database/:/var/lib/mysql
+  api:
+    image: api
+    depends_on:
+      - database
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 8080:8080
+    command: ./docker/wait-for-it.sh database:3306 -- npm start
