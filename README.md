@@ -24,6 +24,21 @@ Trust providers
 https://webgate.ec.europa.eu/tl-browser/#/
 
 
+QWAC
+----
+
+| Provider                       | Available | Price | Country  |
+|--------------------------------| --------- | ----- |----------|
+| Evrotrust Technologies JSC     | No        | ?     | Bulgaria |
+| InfoNotary                     | No        | ?     | Bulgaria |
+| Information Services (StampIt) | No        | ?     | Bulgaria |
+| First certification authority  | No        | ?     | Czech Republic |
+| The Czech Post                 | No        | ?     | Czech Republic |
+| CertEurope                     | No        | ?     | France |
+| Certinomis                     | No        | ?     | France |
+| Dhimyotis                      | No        | ?     | France |
+
+
 Development
 -----------
 
