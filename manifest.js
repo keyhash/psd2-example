@@ -30,7 +30,9 @@ module.exports = (options) => ({
         plugin: `./src/authentication`,
         options: options.authentication
       },
-      `./src/home`
+      `./src/keytradebank`,
+      `./src/bnpparibas`,
+      `./src/belfius`
     ]
   }
 })

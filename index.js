@@ -2,6 +2,8 @@
 
 'use strict'
 
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0
+
 const Glue = require('@hapi/glue')
 
 const defaultConfigFile = (process.env.NODE_ENV === 'development')
